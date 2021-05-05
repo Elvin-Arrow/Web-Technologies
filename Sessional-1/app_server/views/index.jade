@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  
+  .container
+    h2 Course insert
+
+    form(action="/insertCourse", method="post") 
+      .form-group
+        label(for="name") Name
+        input(type="text", class="form-control", name="name")
+      
+      .form-group
+        label(for="outline") Outline
+        input(type="text", class="form-control", name="outline")
+
+      .form-group
+        label(for="name") Credit hours
+        input(type="text", class="form-control", name="creditHours")
+
+      .form-group
+        label(for="name") Department
+        input(type="text", class="form-control", name="department")
+
+      button(type="submit" class="btn btn-primary") Insert
+
+    h2 Insert student
+
+    form(action="/insertStudent", method="post") 
+      .form-group
+        label(for="name") Name
+        input(type="text", class="form-control", name="name")
+      
+      .form-group
+        label(for="outline") Age
+        input(type="text", class="form-control", name="age")
+
+      .form-group
+        label(for="name") Credit hours
+        input(type="text", class="form-control", name="creditHours")
+
+      .form-group
+        label(for="name") Department
+        input(type="text", class="form-control", name="department")
+
+      button(type="submit" class="btn btn-primary") Insert
