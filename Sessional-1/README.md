@@ -1,3 +1,4 @@
+## First Part:
 Create a mongoose schema naming students and courses. Students will have fields like name, age, year, email, phone number, course enrolled etc.
 
 Courses will have fields like department, name, credit hours, subject Outline etc.
