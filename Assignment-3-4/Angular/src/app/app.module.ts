@@ -15,6 +15,10 @@ import { AddStudentsComponent } from './add-students/add-students.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {FormsModule} from "@angular/forms";
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { CheckQuizComponent } from './check-quiz/check-quiz.component';
+import { AttemptQuizComponent } from './attempt-quiz/attempt-quiz.component';
+import { CreateQuizComponent } from './create-quiz/create-quiz.component';
+import { ViewQuizComponent } from './view-quiz/view-quiz.component';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     ManageClassesComponent,
     ViewStudentsComponent,
     AddStudentsComponent,
-    NavigationComponent
+    NavigationComponent,
+    CheckQuizComponent,
+    AttemptQuizComponent,
+    CreateQuizComponent,
+    ViewQuizComponent
   ],
   imports: [
     BrowserModule,

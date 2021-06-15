@@ -102,15 +102,6 @@ router.post('/addstudent', function (req, res, next) {
         .catch((err) => next(err));
 });
 
-router.post('/addassignment', (req, res, next) => {
-    Assignment.create(req.body).then((assignment) => {
-        console.info("Assignment created");
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.json(assignment);
-    })
-})
-
 /* PUT Routes */
 router.put('/class/:cid/student/:sid', function (req, res, next) {
     Class.findOneAndUpdate({ _id: req.params.cid }, {
