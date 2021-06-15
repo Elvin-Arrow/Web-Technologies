@@ -1,1 +1,40 @@
-<p>manage-teachers works!</p>
+<app-navigation></app-navigation>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Teachers</h2>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <td>Index</td>
+                    <td>Name</td>
+                    <td>Designation</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let teacher of data; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{teacher.name}}</td>
+                    <td>{{teacher.designation}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h2>Add teachers</h2>
+            <form>
+                <p class="text-danger">{{errMessage}}</p>
+                <div class="form-group input-pad">
+                    <label>Name</label>
+                    <input name="name" type="text" class="form-control" placeholder="Enter name" [(ngModel)]="name">
+                </div>
+                <div class="form-group input-pad">
+                    <label >Designation</label>
+                    <input name="designation" type="text" class="form-control" placeholder="Designation" [(ngModel)]="designation" >
+                </div>
+
+                <button (click)="addTeacher()" type="submit" class="btn btn-primary">Add teacher</button>
+            </form>
+        </div>
+    </div>
+</div>

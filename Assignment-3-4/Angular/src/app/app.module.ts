@@ -14,6 +14,7 @@ import { ViewStudentsComponent } from './view-students/view-students.component';
 import { AddStudentsComponent } from './add-students/add-students.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {FormsModule} from "@angular/forms";
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgMultiSelectDropDownModule,
 
   ],
   providers: [],

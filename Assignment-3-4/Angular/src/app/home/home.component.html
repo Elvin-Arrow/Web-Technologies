@@ -254,11 +254,11 @@
 
   <form action="">
     <div class="credentials-container">
+      <p class="text-danger">{{errMessage}}</p>
       <div class="form-group">
         <span class="email-icon"></span>
         <input name="username" type="text" class="form-input" required [(ngModel)]="user.username">
         <label class="form-label">Username</label>
-
       </div>
     </div>
 

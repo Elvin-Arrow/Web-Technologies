@@ -1,1 +1,51 @@
-<p>manage-classes works!</p>
+<app-navigation></app-navigation>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Teachers</h2>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <td>Index</td>
+                    <td>Name</td>
+                    <td>Course</td>
+                    <td>Students</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let course of data; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{course.name}}</td>
+                    <td>{{course.teacher.name}}</td>
+                    <td *ngFor="let student of course.students; let i = index">{{student.sid.name}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h2>Assign course</h2>
+            <form>
+                <div class="form-group input-pad">
+                    <label>Course name</label>
+                    <input name="name" type="text" class="form-control" placeholder="Enter name" >
+                </div>
+                <div class="form-group input-pad">
+                    <label >Teachers</label>
+                    <br>
+                    <select class="form-select" name="teacher" id="teachers" >
+                        <option *ngFor="let teacher of teachers; let i = index" value="" [(ngModel)]="courseTeacher">{{teacher.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group input-pad">
+                    <label >Student</label>
+                    <br>
+                    <select class="form-select" name="students" id="students" [(ngModel)]="students" multiple>
+                        <option *ngFor="let student of studentsData; let i = index" value="" >{{student.name}}</option>
+                    </select>
+                </div>
+                <p>{{students}}</p>
+                <button type="submit" class="btn btn-primary">Assign Course</button>
+            </form>
+        </div>
+    </div>
+</div>
