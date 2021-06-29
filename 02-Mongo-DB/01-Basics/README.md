@@ -21,7 +21,11 @@ mongo
 To check current DB, use `db` command
 <br>
 `db.help()` will show you commands available
-<br>
+<br><br>
 To view the database statistics use: `db.stats()`
+<br><br>
+To view all databases use: `show dbs`
+
+To use a particular DB, use: `use [name of the databse]`
 
 
