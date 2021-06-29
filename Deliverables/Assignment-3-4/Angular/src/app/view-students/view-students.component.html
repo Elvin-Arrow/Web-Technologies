@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <td>Index</td>
+    <td>Name</td>
+    <td>Registration number</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of data; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.rollno}}</td>
+  </tr>
+  </tbody>
+
+</table>
+
+

@@ -1,0 +1,3 @@
+This is a sample text file
+
+This file is to be read using the node JS fs module

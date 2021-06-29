@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/admin">LMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/teacher">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" routerLink="/teacher/create-quiz">Create quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/teacher/check-quiz">Check quiz</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>Create a new quiz</h2>
+            <form action="">
+                <div class="form-group questions">
+                    <label for="title">Quiz title</label>
+                    <input type="text" id="title" class="form-control" name="title" [(ngModel)]="quiz.title">
+                </div>
+                <div class="form-group questions">
+                    <label for="question">Score</label>
+                    <input type="number" id="score" class="form-control" value="10" name="score" [(ngModel)]="quiz.score">
+                </div>
+                <div class="questions" *ngFor="let question of questions">
+                    <h3>Question {{question+1}}</h3>
+                    <div class="form-group questions">
+                        <label for="question">Question</label>
+                        <input type="text" id="question" class="form-control" name="question" [(ngModel)]="quiz.questions[question]">
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-3">
+                    <button class="btn btn-primary" (click)="addQuestion()">Add question</button>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                    <button class="btn btn-secondary" (click)="createQuiz()">Create quiz</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

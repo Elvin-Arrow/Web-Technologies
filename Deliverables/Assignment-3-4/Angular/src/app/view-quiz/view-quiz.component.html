@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand pad" href="student">LMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/student">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/student">Assignments</a>
+                </li>
+                <li class="nav-item fw-bold">
+                    <a class="nav-link" routerLink="/student/quizzes">Quizzes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="quiz-container">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <td>Sr.no</td>
+                <td>Title</td>
+                <td>Score</td>
+                <td></td>
+            </tr>
+
+            </thead>
+            <tbody>
+            <tr *ngFor="let quiz of quizzes; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{quiz.title}}</td>
+                <td>{{quiz.score}}</td>
+                <td><a routerLink="/student/attempt-quiz/{{i}}">Attempt quiz</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button class="btn btn-primary">Submit quiz</button>
+</div>
