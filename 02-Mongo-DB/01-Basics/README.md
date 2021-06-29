@@ -42,7 +42,7 @@ show dbs
 
 To use a particular DB, use: 
 ```bash
-use [name of the databse]
+use [name of the database]
 ```
 
 To list all collections in a DB, use:
