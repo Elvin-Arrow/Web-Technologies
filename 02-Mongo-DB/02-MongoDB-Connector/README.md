@@ -159,7 +159,7 @@ function dbHander(err, db) {
 
 Notice how the `find` function takes the second parameter as project, which essentially tells what to keep in the search result
 
-**Sort search result**
+##### Sort search result
 To sort search result in ascending order use:
 ```js
 function dbHander(err, db) {
