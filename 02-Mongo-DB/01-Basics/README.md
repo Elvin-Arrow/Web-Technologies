@@ -19,7 +19,8 @@ mongo
 ### Basic commands
 
 To check current DB, use `db` command
-<br>
+
+
 `db.help()` will show you commands available
 
 
@@ -32,3 +33,13 @@ To view all databases use: `show dbs`
 To use a particular DB, use: `use [name of the databse]`
 
 
+To list all collections in a DB, use:
+```bash
+show collections
+```
+
+
+Collections can be created using:
+```bash
+db.createCollection(name,options)
+```
