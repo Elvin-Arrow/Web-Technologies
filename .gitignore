@@ -1,6 +1,3 @@
-Assignment-3-4/Express/package-lock.json
-Assignment-3-4/Angular/.idea/.gitignore
-Assignment-3-4/Angular/.idea/Angular.iml
-Assignment-3-4/Angular/.idea/modules.xml
-Assignment-3-4/Angular/.idea/vcs.xml
-Assignment-3-4/Angular/package-lock.json
+node_modules/
+.idea/
+package-lock.json
